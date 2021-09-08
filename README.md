@@ -10,7 +10,7 @@ _You can download this file as PDF [by clicking here](https://pauloelienay.com/s
 
 Signals is an open-source live-sharing character-limited-posting social media. It aims to have the same functionalities as Twitter.
 
-<img src="./docs/diamgrams/../diagrams/project_overview.png" alt="Signals project diagram" style="max-width: 80%; margin-left: 10%" />
+<img src="./docs/diagrams/project_overview.png" alt="Signals project diagram" style="max-width: 80%; margin-left: 10%" />
 
 ## Back-end structure
 
