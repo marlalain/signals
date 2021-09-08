@@ -12,7 +12,7 @@ Signals is an open-source live-sharing character-limited-posting social media. I
 
 [Learn more about it here](BACKEND_STRUCTURE.md).
 
-![Simplified project diagram](./docs/diagrams/project_overview.png)
+![Simplified project diagram v2](./docs/diagrams/project_overview.png)
 
 ## Front-end and UI/UX
 

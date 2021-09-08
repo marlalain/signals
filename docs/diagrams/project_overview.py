@@ -14,17 +14,19 @@ with Diagram("Project Overview", graph_attr=graph_attr):
     user = Users("Users")
     gateway = Spring("Gateway")
     discovery = Spring("Eureka Discovery")
-    security = Docker("security-service")
-    posts = Docker("posts-service")
-    followers = Docker("followers-service")
     notification = Docker("notification-service")
-    etc = Docker("[...]")
+
+    with Cluster("Services"):
+        security = Docker("security-service")
+        posts = Docker("posts-service")
+        followers = Docker("followers-service")
+        etc = Docker("[...]")
+        services = [security, posts, followers, etc]
 
     with Cluster("CD/CI"):
-        cdci_group = Github() >> GithubActions("GitHub Actions")
+        cdci_group = Github() >> Edge(label="push") >> GithubActions("GitHub Actions")
 
     notification >> user
-    user >> gateway >> discovery >> \
-        [security, posts, followers, etc] >> discovery
+    user >> Edge() << gateway >> Edge() << discovery >> Edge() << services
 
     Edge() >> cdci_group

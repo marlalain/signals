@@ -1,4 +1,4 @@
-from diagrams import Diagram
+from diagrams import Diagram, Edge
 from diagrams.onprem.container import Docker
 from diagrams.programming.framework import Spring
 
@@ -12,4 +12,4 @@ with Diagram("Services Communication", graph_attr=graph_attr):
     other_service = Docker("other-service-container")
     discovery = Spring("Discovery Server")
 
-    service >> discovery >> other_service >> service
+    service >> Edge(label="request") >> discovery >> other_service >> Edge(label="\nresponse") >> service

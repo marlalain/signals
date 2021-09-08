@@ -11,3 +11,9 @@ This project has small, autonomous containers with different services and databa
 Services request the service discovery server for other services' information (IP address, port) when they communicate with each other, just like when users make a request.
 
 ![Services Communication](docs/diagrams/backend_structure/services_communication.png)
+
+## Notifications
+
+In this example, a user replies to another users' post. After handling the reply logic, the `Posts Service` fires an event warning the `Notification Service` to show the post creator a notification.
+
+![Notification System](docs/diagrams/backend_structure/how_notifications_work.png)

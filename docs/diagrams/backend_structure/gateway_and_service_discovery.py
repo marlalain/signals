@@ -1,4 +1,4 @@
-from diagrams import Diagram, Cluster
+from diagrams import Diagram, Cluster, Edge
 from diagrams.generic.database import SQL
 from diagrams.generic.os import LinuxGeneral
 from diagrams.onprem.client import User
@@ -23,6 +23,6 @@ with Diagram("Gateway and Service Discovery", graph_attr=graph_attr):
         other_service = Docker("service-container")
         other_service - [SQL("service-database"), LinuxGeneral("service-api")]
 
-    user >> gateway
-    gateway - [discovery]
-    discovery >> [sample_service, other_service] >> discovery
+    user >> Edge() << gateway
+    gateway >> Edge() << discovery
+    discovery >> Edge() << [sample_service, other_service]
