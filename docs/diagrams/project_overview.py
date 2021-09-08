@@ -8,7 +8,7 @@ from diagrams.onprem.vcs import Github
 
 graph_attr = {
     "fontsize": "25",
-    "bgcolor": "transparent"
+    "bgcolor": "white"
 }
 
 with Diagram("Project Overview", graph_attr=graph_attr):
