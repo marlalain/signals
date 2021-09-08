@@ -23,3 +23,7 @@ This project will try to get close to the Twitter UI/UX. The goal of the front-e
 ## Goals
 
 The goal of this project is to have a full fullstack project -- with many of today's most talked-about technologies -- made open-source for my own learning and the learning of others.
+
+## License
+
+[BSD-3-Clause License](LICENSE).
