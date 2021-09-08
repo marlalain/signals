@@ -10,6 +10,8 @@ _You can download this file as PDF [by clicking here](https://pauloelienay.com/s
 
 Signals is an open-source live-sharing character-limited-posting social media. It aims to have the same functionalities as Twitter.
 
+![Signals project diagram](./docs/diagrams/project_overview.png)
+
 ## Back-end structure
 
 This project uses the [Microservice Architecture](https://en.wikipedia.org/wiki/Microservices).
