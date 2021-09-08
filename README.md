@@ -8,11 +8,11 @@ _This is also a live document. It will change from time to time._
 
 Signals is an open-source live-sharing character-limited-posting social media. It aims to have the same functionalities as Twitter.
 
-![Simplified project diagram](./docs/diagrams/project_overview.png)
-
 ## Back-end structure
 
 [Learn more about it here](BACKEND_STRUCTURE.md).
+
+![Simplified project diagram](./docs/diagrams/project_overview.png)
 
 ## Front-end and UI/UX
 
