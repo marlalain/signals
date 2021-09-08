@@ -1,10 +1,12 @@
 from diagrams import Diagram, Cluster, Edge
+from diagrams.generic.storage import Storage
 from diagrams.onprem.ci import GithubActions
 from diagrams.onprem.client import Users
 from diagrams.onprem.container import Docker
 from diagrams.onprem.database import PostgreSQL
 from diagrams.onprem.inmemory import Redis
 from diagrams.onprem.vcs import Github
+from diagrams.programming.framework import Spring
 
 graph_attr = {
     "fontsize": "25",
@@ -13,7 +15,8 @@ graph_attr = {
 
 with Diagram("Project Overview", graph_attr=graph_attr):
     user = Users("Users")
-    gateway = Docker("Gateway")
+    gateway = Spring("Gateway")
+    discovery = Spring("Eureka Discovery")
 
     with Cluster("Security"):
         sec_group = Docker("security-service")
@@ -31,12 +34,15 @@ with Diagram("Project Overview", graph_attr=graph_attr):
         notif_group = Docker("notification-service")
         notif_group - [Redis("notification-db")]
 
+    with Cluster("User Profile System"):
+        profile_group = Docker("user-profile-service")
+        profile_group - [PostgreSQL("user-profile-db"), Storage("user-photos")]
+
     with Cluster("CD/CI"):
         cdci_group = Github() >> GithubActions("GitHub Actions")
 
     notif_group - [user]
-    user >> gateway >> sec_group
-    gateway >> posts_group
-    gateway >> followers_group
+    user >> gateway >> discovery >> \
+        [sec_group, posts_group, followers_group, profile_group]
 
     Edge() >> cdci_group
