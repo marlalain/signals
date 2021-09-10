@@ -1,4 +1,8 @@
 language: java
+install:
+  - api/authentication-service/mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+  - api/discovery-service/mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+  - api/gateway-service/mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 script:
   - api/authentication-service/mvnw test
   - api/discovery-service/mvnw test
