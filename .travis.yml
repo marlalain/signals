@@ -1,0 +1,5 @@
+language: java
+script:
+  - api/authentication-service/mvnw test
+  - api/discovery-service/mvnw test
+  - api/gateway-service/mvnw test
