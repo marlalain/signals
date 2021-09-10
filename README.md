@@ -1,27 +1,36 @@
-# Project Overview
+# `Signals`
 
-_This is a simple document. A longer, more detailed version of this project's specifications will be created at another time._
+<center>
+  <p>
+    <img src="https://app.travis-ci.com/paulo-e/signals.svg?branch=main" alt="The TravisCI badge. Probably says \"build: passing\"">
+    <img src="https://badgen.net/github/license/paulo-e/signals" alt="This project's license is BSD-3-Clause">
+  </p>
+  <p>
+    <img src="https://img.shields.io/badge/framework-springboot-green.svg" alt="This project uses the framework Spring Boot">
+  </p>
+  <p>
+    <img src="https://badgen.net/badge/icon/maven?icon=maven&label" alt="This project uses the tool maven">
+  </p>
+  
+  <p><i>The proof-of-concept open-source social media platform.</i></p>
+</center>
 
-_This is also a live document. It will change from time to time._
+## [Project Overview](PROJECT_OVERVIEW.md)
 
-## What is `Signals`?
+[Click here](PROJECT_OVERVIEW.md).
 
-Signals is an open-source live-sharing character-limited-posting social media. It aims to have the same functionalities as Twitter.
+## [Installing](INSTALL.md)
 
-## Back-end structure
+[Click here](INSTALL.md).
 
-[Learn more about it here](BACKEND_STRUCTURE.md).
+## [Backend Structure](BACKEND_STRUCTURE.md)
 
-![Simplified project diagram v2](./docs/diagrams/project_overview.png)
+[Click here](BACKEND_STRUCTURE.md).
 
-## Front-end and UI/UX
+## [License](LICENSE)
 
-This project will try to get close to the Twitter UI/UX. The goal of the front-end is to be user-friendly and have as little migration friction as possible.
+[Click here](LICENSE).
 
-## Goals
+## [Contributing](CONTRIBUTING.md)
 
-The goal of this project is to have a full fullstack project -- with many of today's most talked-about technologies -- made open-source for my own learning and the learning of others.
-
-## License
-
-[BSD-3-Clause License](LICENSE).
+[Click here](CONTRIBUTING.md).
