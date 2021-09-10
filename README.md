@@ -1,6 +1,6 @@
 # `Signals`
 
-<p align="center">
+<div align="center">
   <p>
     <img src="https://app.travis-ci.com/paulo-e/signals.svg?branch=main" alt="The TravisCI badge. Probably says \"build: passing\"">
     <img src="https://badgen.net/github/license/paulo-e/signals" alt="This project's license is BSD-3-Clause">
@@ -13,7 +13,7 @@
   </p>
   
   <p><i>The proof-of-concept open-source social media platform.</i></p>
-</p>
+</div>
 
 ## [Project Overview](PROJECT_OVERVIEW.md)
 
