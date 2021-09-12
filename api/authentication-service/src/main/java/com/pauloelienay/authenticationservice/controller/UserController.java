@@ -1,7 +1,6 @@
 package com.pauloelienay.authenticationservice.controller;
 
 import com.pauloelienay.authenticationservice.model.User;
-import com.pauloelienay.authenticationservice.model.dto.RegisteredUser;
 import com.pauloelienay.authenticationservice.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

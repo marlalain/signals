@@ -1,6 +1,5 @@
 package com.pauloelienay.authenticationservice.model;
 
-import com.pauloelienay.authenticationservice.model.dto.RegisteredUser;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -39,8 +38,4 @@ public class User {
 	private String password;
 
 	private LocalDateTime createdAt = LocalDateTime.now();
-
-	public RegisteredUser convertToDto() {
-		return RegisteredUser.convertToDto(this);
-	}
 }
