@@ -1,11 +1,16 @@
 spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
   application:
     name: authentication-service
-  data:
-    mongodb:
-      database: signals
-      port: 27017
-      host: localhost
+  datasource:
+    url: jdbc:postgresql://localhost:9001/signals
+    username: signals
+    password: signals
 
 server:
   port: 8001
