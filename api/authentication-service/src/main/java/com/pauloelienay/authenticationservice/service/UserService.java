@@ -2,6 +2,7 @@ package com.pauloelienay.authenticationservice.service;
 
 import com.pauloelienay.authenticationservice.exceptions.BadCredentialsException;
 import com.pauloelienay.authenticationservice.exceptions.EntityNotFoundException;
+import com.pauloelienay.authenticationservice.exceptions.ExistentUniqueEntityFieldException;
 import com.pauloelienay.authenticationservice.model.User;
 import com.pauloelienay.authenticationservice.model.dto.LoginRequest;
 import com.pauloelienay.authenticationservice.model.dto.LoginResponse;
@@ -22,7 +23,11 @@ public class UserService {
 	private final JwtUtil util;
 
 	public void register(User user) {
-		repository.save(user);
+		try {
+			repository.save(user);
+		} catch (Exception e) {
+			throw new ExistentUniqueEntityFieldException("This username or email are being used.");
+		}
 	}
 
 	public LoginResponse login(LoginRequest user) {
