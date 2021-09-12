@@ -16,3 +16,7 @@ server:
   port: 8001
   error:
     include-stacktrace: on_param
+
+jwt:
+  expiration: 1800000
+  secret: signals

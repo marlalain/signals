@@ -1,6 +1,8 @@
 package com.pauloelienay.authenticationservice.controller;
 
 import com.pauloelienay.authenticationservice.model.User;
+import com.pauloelienay.authenticationservice.model.dto.LoginRequest;
+import com.pauloelienay.authenticationservice.model.dto.LoginResponse;
 import com.pauloelienay.authenticationservice.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,5 +26,10 @@ public class UserController {
 		service.register(user);
 
 		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+	}
+
+	@PostMapping("/login")
+	public ResponseEntity<LoginResponse> login(@Valid @RequestBody LoginRequest user) {
+		return new ResponseEntity<>(service.login(user), HttpStatus.OK);
 	}
 }
