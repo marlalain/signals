@@ -16,11 +16,14 @@
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud.version>2020.0.3</spring-cloud.version>
+		<my-spring-cloud.version>3.0.3</my-spring-cloud.version>
+		<my-spring-boot.version>2.5.4</my-spring-boot.version>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+			<version>${my-spring-cloud.version}</version>
 		</dependency>
 
 		<!--	TODO	-->
@@ -30,11 +33,13 @@
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
 			<optional>true</optional>
+			<version>${my-spring-boot.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
+			<version>${my-spring-boot.version}</version>
 		</dependency>
 		<!--	REMOVE ABOVE-->
 
@@ -42,6 +47,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+			<version>${my-spring-boot.version}</version>
 		</dependency>
 	</dependencies>
 	<dependencyManagement>
